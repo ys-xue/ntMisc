@@ -4,7 +4,7 @@
 ##'
 ##' @param mcmc.object an MCMC object
 ##'
-##' return a list:
+##' @return a list:
 ##' \itemize{
 ##' \item min.sse the smallest SSE
 ##' \item cLS the index for the iteration that minimize SSE

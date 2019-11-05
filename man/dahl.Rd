@@ -7,14 +7,15 @@
 dahl(mcmc.object)
 }
 \arguments{
-\item{mcmc.object}{an MCMC object
-
-return a list:
+\item{mcmc.object}{an MCMC object}
+}
+\value{
+a list:
 \itemize{
 \item min.sse the smallest SSE
 \item cLS the index for the iteration that minimize SSE
 \item cluster the final clustering outcome
-}}
+}
 }
 \description{
 Dahl's Method for MCMC Inference
