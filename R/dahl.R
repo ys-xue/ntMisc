@@ -17,7 +17,7 @@
 dahl <- function(mcmc.object) {
   niter <- nrow(mcmc.object)
   BList <- map(1:niter, ~outer(mcmc.object[.x,], mcmc.object[.x,], "=="))
-  BBar <- Reduce("+", "BList") / niter
+  BBar <- Reduce("+", BList) / niter
   SSE <- map_dbl(BList, ~sum((.x - BBar)^2))
   return(list(min.sse = min(SSE), cLS = which.min(SSE),
               cluster = as.numeric(mcmc.object[which.min(SSE),])))
